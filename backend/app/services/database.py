@@ -394,6 +394,39 @@ def create_plan(body: dict[str, Any]) -> dict[str, Any]:
     return plan
 
 
+def delete_plan(slug: str) -> bool:
+    """
+    Delete a learning domain and its stored progress.
+
+    Args:
+        slug: Plan identifier.
+
+    Returns:
+        True if a plan was removed, False if the slug was not found.
+    """
+    if not get_plan(slug):
+        logger.debug("Delete plan skipped; slug=%s not found", slug)
+        return False
+    if storage_mode() == "file":
+        plan_path = data_root() / "plans" / f"{slug}.json"
+        progress_path = data_root() / "progress" / f"{slug}.json"
+        if plan_path.exists():
+            plan_path.unlink()
+        if progress_path.exists():
+            progress_path.unlink()
+        logger.info("Deleted plan slug=%s (file storage)", slug)
+        return True
+
+    with pg_connect() as conn:
+        row = conn.execute(
+            "DELETE FROM plans WHERE slug = %s RETURNING slug",
+            (slug,),
+        ).fetchone()
+    if row:
+        logger.info("Deleted plan slug=%s (postgres)", slug)
+    return bool(row)
+
+
 def add_module(slug: str, body: dict[str, Any]) -> dict[str, Any]:
     """
     Add a section (module) to a plan.

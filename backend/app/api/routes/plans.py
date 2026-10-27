@@ -30,6 +30,15 @@ async def create_plan(req: Request):
     return JSONResponse(plan, status_code=201)
 
 
+@router.delete("/api/plans/{slug}")
+def remove_plan(slug: str):
+    """Delete a learning domain and its progress."""
+    if not db.delete_plan(slug):
+        raise HTTPException(status_code=404, detail="plan not found")
+    logger.info("Deleted plan slug=%s", slug)
+    return {"ok": True}
+
+
 @router.get("/api/plans/{slug}")
 def get_plan(slug: str):
     """Return full curriculum for a plan."""

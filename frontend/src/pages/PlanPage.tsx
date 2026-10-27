@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import * as api from "../api/client";
 import { TopicRow } from "../components/plan/TopicRow";
+import { AppFooter } from "../components/ui/AppFooter";
 import { AppHeader } from "../components/ui/AppHeader";
 import { Modal } from "../components/ui/Modal";
 import { usePlanSession } from "../hooks/usePlanSession";
@@ -48,6 +49,10 @@ export function PlanPage() {
     () => session.allTopics.find((z) => z.id === session.selectedTopicId),
     [session.allTopics, session.selectedTopicId],
   );
+
+  useEffect(() => {
+    if (!selectedTopic) setNotesOpen(false);
+  }, [selectedTopic]);
 
   useEffect(() => {
     if (session.modules.length && !newModuleId) {
@@ -185,23 +190,26 @@ export function PlanPage() {
   if (!session.plan) {
     return (
       <div className="page-shell">
-        <AppHeader />
+        <AppHeader backTo="/" backLabel="All domains" />
         <div className="home-shell">
           <p className="sub">Loading plan…</p>
         </div>
+        <AppFooter />
       </div>
     );
   }
 
   return (
     <div className="page-shell">
-    <AppHeader>
+    <AppHeader backTo="/" backLabel="All domains">
       <button type="button" className="icon-btn" title="Toggle theme" aria-label="Toggle theme" onClick={toggleTheme}>
         ◐
       </button>
     </AppHeader>
-    <div className="app">
-      <aside className={`sidebar glass${sidebarOpen ? " mobile-open" : ""}`} aria-label="Plan navigation">
+    <div
+      className={`app${selectedTopic ? " has-selected-topic" : ""}${notesOpen && selectedTopic ? " notes-open" : ""}`}
+    >
+      <aside className={`sidebar${sidebarOpen ? " mobile-open" : ""}`} aria-label="Plan navigation">
         <p className="brand">{session.plan.title}</p>
         <p className="brand-sub">{session.plan.subtitle || ""}</p>
         <nav>
@@ -244,7 +252,8 @@ export function PlanPage() {
               className="btn btn-ghost"
               id="notesBtn"
               style={{ display: "none" }}
-              onClick={() => setNotesOpen((v) => !v)}
+              disabled={!selectedTopic}
+              onClick={() => selectedTopic && setNotesOpen((v) => !v)}
             >
               Notes
             </button>
@@ -543,7 +552,10 @@ export function PlanPage() {
                             }}
                             onRemove={() => {
                               session.removeTopic(x.id).then(() => {
-                                if (session.selectedTopicId === x.id) session.setSelectedTopicId(null);
+                                if (session.selectedTopicId === x.id) {
+                                  session.setSelectedTopicId(null);
+                                  setNotesOpen(false);
+                                }
                               });
                             }}
                           />
@@ -607,33 +619,36 @@ export function PlanPage() {
         </section>
       </div>
 
-      <aside
-        className={`right-panel glass${notesOpen ? " mobile-open" : ""}`}
-        id="rightPanel"
-        aria-label="Topic notes"
-      >
-        <h2>Notes</h2>
-        {!selectedTopic ? (
-          <p className="hint" id="notesHint">
-            Select a topic to write notes. Notes sync with your progress.
+      {notesOpen && selectedTopic ? (
+        <aside
+          className="right-panel glass notes-visible"
+          id="rightPanel"
+          aria-label="Topic notes"
+        >
+          <div className="right-panel-head">
+            <h2>Notes</h2>
+            <button
+              type="button"
+              className="icon-btn icon-btn-sm"
+              aria-label="Close notes"
+              onClick={() => setNotesOpen(false)}
+            >
+              ×
+            </button>
+          </div>
+          <h3 id="notesTopicTitle">{selectedTopic.t}</h3>
+          <p className="hint" id="notesMeta">
+            {selectedTopic.k}
+            {selectedTopic.u ? ` · ${selectedTopic.u}` : ""}
           </p>
-        ) : (
-          <>
-            <p className="hint hidden" id="notesHint" />
-            <h3 id="notesTopicTitle">{selectedTopic.t}</h3>
-            <p className="hint" id="notesMeta">
-              {selectedTopic.k}
-              {selectedTopic.u ? ` · ${selectedTopic.u}` : ""}
-            </p>
-            <textarea
-              id="notesEditor"
-              aria-label="Topic notes"
-              value={session.progress.items[selectedTopic.id]?.note || ""}
-              onChange={(e) => session.patchTopic(selectedTopic.id, { note: e.target.value })}
-            />
-          </>
-        )}
-      </aside>
+          <textarea
+            id="notesEditor"
+            aria-label="Topic notes"
+            value={session.progress.items[selectedTopic.id]?.note || ""}
+            onChange={(e) => session.patchTopic(selectedTopic.id, { note: e.target.value })}
+          />
+        </aside>
+      ) : null}
 
       <Modal
         open={sectionModal}
@@ -718,6 +733,7 @@ export function PlanPage() {
         <textarea aria-label="Plan JSON" value={importText} onChange={(e) => setImportText(e.target.value)} />
       </Modal>
     </div>
+    <AppFooter />
     </div>
   );
 }

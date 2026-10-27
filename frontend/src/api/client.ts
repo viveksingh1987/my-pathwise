@@ -24,6 +24,11 @@ export async function createPlan(body: {
   );
 }
 
+export async function deletePlan(slug: string): Promise<void> {
+  const res = await fetch(`/api/plans/${encodeURIComponent(slug)}`, { method: "DELETE" });
+  if (!res.ok) throw new Error("delete failed");
+}
+
 export async function fetchPlan(slug: string): Promise<Plan> {
   return parseJson(await fetch(`/api/plans/${encodeURIComponent(slug)}`));
 }
