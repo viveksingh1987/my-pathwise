@@ -1,0 +1,695 @@
+{
+  "slug": "ai-engineer",
+  "title": "Full-stack to AI engineer",
+  "subtitle": "Nov 2026 – Apr 2027 · 6-month roadmap",
+  "lead": "Track courses, dates, notes and study time across six months. Progress saves automatically to the server when Docker is running, or to this browser otherwise.",
+  "modules": [
+    {
+      "id": "ai-engineer-m1",
+      "sort_order": 1,
+      "period_label": "November 2026",
+      "heading": "Python, SQL and machine learning foundations",
+      "goal": "Learn how models are trained and judged: features, loss, overfitting, metrics. Sharpen the Python data stack and analytical SQL. Spread Python and SQL items across the month.",
+      "project": "Forecast electricity demand from a public half-hourly dataset. Compare a baseline with gradient boosting and report the error.",
+      "tech": [
+        "NumPy",
+        "pandas",
+        "scikit-learn",
+        "Jupyter",
+        "Kaggle",
+        "Python typing",
+        "Window functions",
+        "CTEs",
+        "Model evaluation",
+        "EDA"
+      ],
+      "topics": [
+        {
+          "id": "m1r0",
+          "title": "Google Machine Learning Crash Course",
+          "url": "https://developers.google.com/machine-learning/crash-course",
+          "kind": "Course",
+          "description": "Short, practical start",
+          "sort_order": 0
+        },
+        {
+          "id": "m1r1",
+          "title": "Kaggle Learn: Pandas and Intro to Machine Learning",
+          "url": "https://www.kaggle.com/learn",
+          "kind": "Course",
+          "description": "Free notebooks with exercises",
+          "sort_order": 1
+        },
+        {
+          "id": "m1r2",
+          "title": "StatQuest with Josh Starmer",
+          "url": "https://www.youtube.com/@statquest",
+          "kind": "YouTube",
+          "description": "Clear explanations of regression, trees, and metrics",
+          "sort_order": 2
+        },
+        {
+          "id": "m1r3",
+          "title": "3Blue1Brown: Neural networks",
+          "url": "https://www.3blue1brown.com/topics/neural-networks",
+          "kind": "YouTube",
+          "description": "Build intuition for gradients and backpropagation",
+          "sort_order": 3
+        },
+        {
+          "id": "m1r4",
+          "title": "Machine Learning Specialization (Andrew Ng, audit for free)",
+          "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+          "kind": "Course",
+          "description": "Pick the courses you need; auditing is free",
+          "sort_order": 4
+        },
+        {
+          "id": "m1r5",
+          "title": "scikit-learn tutorials",
+          "url": "https://scikit-learn.org/stable/tutorial/index.html",
+          "kind": "Docs",
+          "description": "Reference while you build",
+          "sort_order": 5
+        },
+        {
+          "id": "m1r6",
+          "title": "Python Data Science Handbook (Jake VanderPlas)",
+          "url": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+          "kind": "Book",
+          "description": "Free online: NumPy, pandas, matplotlib, scikit-learn",
+          "sort_order": 6
+        },
+        {
+          "id": "m1r7",
+          "title": "NumPy: absolute beginners guide",
+          "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+          "kind": "Docs",
+          "description": "Arrays, shapes and broadcasting",
+          "sort_order": 7
+        },
+        {
+          "id": "m1r8",
+          "title": "Python type hints cheat sheet (mypy)",
+          "url": "https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html",
+          "kind": "Docs",
+          "description": "Typed Python in AI codebases",
+          "sort_order": 8
+        },
+        {
+          "id": "m1r9",
+          "title": "Kaggle Learn: Advanced SQL",
+          "url": "https://www.kaggle.com/learn/advanced-sql",
+          "kind": "Course",
+          "description": "Joins, analytic functions, nested data",
+          "sort_order": 9
+        },
+        {
+          "id": "m1r10",
+          "title": "PostgreSQL tutorial: window functions",
+          "url": "https://www.postgresql.org/docs/current/tutorial-window.html",
+          "kind": "Docs",
+          "description": "Rolling averages, ranking and lag",
+          "sort_order": 10
+        },
+        {
+          "id": "m1r11",
+          "title": "SQLBolt",
+          "url": "https://sqlbolt.com/",
+          "kind": "Website",
+          "description": "Interactive SQL refresher",
+          "sort_order": 11
+        },
+        {
+          "id": "m1r12",
+          "title": "Rules of Machine Learning (Google)",
+          "url": "https://developers.google.com/machine-learning/guides/rules-of-ml",
+          "kind": "Guide",
+          "description": "Heuristics that survive real pipelines and iteration",
+          "sort_order": 12
+        },
+        {
+          "id": "m1r13",
+          "title": "scikit-learn: Model selection and evaluation",
+          "url": "https://scikit-learn.org/stable/model_selection.html",
+          "kind": "Docs",
+          "description": "Cross-validation, metrics, leakage and overfitting",
+          "sort_order": 13
+        },
+        {
+          "id": "m1r14",
+          "title": "Matplotlib tutorials",
+          "url": "https://matplotlib.org/stable/tutorials/index.html",
+          "kind": "Docs",
+          "description": "Plot errors, distributions and features for EDA",
+          "sort_order": 14
+        }
+      ]
+    },
+    {
+      "id": "ai-engineer-m2",
+      "sort_order": 2,
+      "period_label": "December 2026",
+      "heading": "Deep learning and transformers",
+      "goal": "Understand neural networks and transformers well enough to read papers and debug model behaviour.",
+      "project": "Train a small character-level language model with PyTorch, then explain in a write-up how attention works.",
+      "tech": [
+        "PyTorch",
+        "Transformers",
+        "GPU basics",
+        "Google Colab",
+        "Hugging Face",
+        "Tokenization"
+      ],
+      "topics": [
+        {
+          "id": "m2r0",
+          "title": "Andrej Karpathy: Neural Networks, Zero to Hero",
+          "url": "https://karpathy.ai/zero-to-hero.html",
+          "kind": "YouTube",
+          "description": "The best single series; code along",
+          "sort_order": 0
+        },
+        {
+          "id": "m2r1",
+          "title": "PyTorch basics tutorials",
+          "url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+          "kind": "Docs",
+          "description": "Tensors, autograd, training loops",
+          "sort_order": 1
+        },
+        {
+          "id": "m2r2",
+          "title": "The Illustrated Transformer (Jay Alammar)",
+          "url": "https://jalammar.github.io/illustrated-transformer/",
+          "kind": "Blog",
+          "description": "Visual walkthrough of attention",
+          "sort_order": 2
+        },
+        {
+          "id": "m2r3",
+          "title": "fast.ai Practical Deep Learning",
+          "url": "https://course.fast.ai/",
+          "kind": "Course",
+          "description": "Top-down, project-first approach",
+          "sort_order": 3
+        },
+        {
+          "id": "m2r4",
+          "title": "Build a Large Language Model from Scratch (Sebastian Raschka)",
+          "url": "https://github.com/rasbt/LLMs-from-scratch",
+          "kind": "GitHub",
+          "description": "Optional deeper dive",
+          "sort_order": 4
+        },
+        {
+          "id": "m2r5",
+          "title": "Hugging Face Transformers",
+          "url": "https://huggingface.co/docs/transformers/index",
+          "kind": "Docs",
+          "description": "Load, fine-tune and run pretrained models in practice",
+          "sort_order": 5
+        },
+        {
+          "id": "m2r6",
+          "title": "Hugging Face: Tokenizers",
+          "url": "https://huggingface.co/docs/transformers/en/tokenizer_summary",
+          "kind": "Docs",
+          "description": "BPE, context limits and why inputs get truncated",
+          "sort_order": 6
+        },
+        {
+          "id": "m2r7",
+          "title": "PyTorch: CUDA and memory notes",
+          "url": "https://pytorch.org/docs/stable/notes/cuda.html",
+          "kind": "Docs",
+          "description": "Fix OOMs and choose batch size on GPU",
+          "sort_order": 7
+        }
+      ]
+    },
+    {
+      "id": "ai-engineer-m3",
+      "sort_order": 3,
+      "period_label": "January 2027",
+      "heading": "Building with LLM APIs",
+      "goal": "Build on LLM APIs: prompting, structured output, tool calling, streaming, cost and latency.",
+      "project": "Build an API that extracts structured fields from messy text, with validation, streaming and retries.",
+      "tech": [
+        "Claude API",
+        "OpenAI API",
+        "Prompt design",
+        "JSON schema",
+        "FastAPI",
+        "Pydantic",
+        "asyncio",
+        "Streaming",
+        "Retries"
+      ],
+      "topics": [
+        {
+          "id": "m3r0",
+          "title": "Andrej Karpathy: Intro to Large Language Models",
+          "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+          "kind": "YouTube",
+          "description": "One-hour mental model of LLMs",
+          "sort_order": 0
+        },
+        {
+          "id": "m3r1",
+          "title": "Anthropic prompt engineering guide",
+          "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "kind": "Docs",
+          "description": "Prompting patterns that work",
+          "sort_order": 1
+        },
+        {
+          "id": "m3r2",
+          "title": "Anthropic courses (GitHub)",
+          "url": "https://github.com/anthropics/courses",
+          "kind": "GitHub",
+          "description": "Hands-on notebooks for API and tool use",
+          "sort_order": 2
+        },
+        {
+          "id": "m3r3",
+          "title": "DeepLearning.AI short courses",
+          "url": "https://www.deeplearning.ai/short-courses/",
+          "kind": "Course",
+          "description": "Free courses on LLM APIs and function calling",
+          "sort_order": 3
+        },
+        {
+          "id": "m3r4",
+          "title": "OpenAI Cookbook",
+          "url": "https://cookbook.openai.com/",
+          "kind": "Docs",
+          "description": "Worked examples",
+          "sort_order": 4
+        },
+        {
+          "id": "m3r5",
+          "title": "Hugging Face LLM Course",
+          "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+          "kind": "Course",
+          "description": "Open models, tokenizers, pipelines",
+          "sort_order": 5
+        },
+        {
+          "id": "m3r6",
+          "title": "FastAPI tutorial",
+          "url": "https://fastapi.tiangolo.com/tutorial/",
+          "kind": "Docs",
+          "description": "Serve LLM features as APIs",
+          "sort_order": 6
+        },
+        {
+          "id": "m3r7",
+          "title": "Pydantic documentation",
+          "url": "https://docs.pydantic.dev/latest/",
+          "kind": "Docs",
+          "description": "Validate model output into typed objects",
+          "sort_order": 7
+        },
+        {
+          "id": "m3r8",
+          "title": "Real Python: async IO in Python",
+          "url": "https://realpython.com/async-io-python/",
+          "kind": "Blog",
+          "description": "Concurrent LLM calls without blocking",
+          "sort_order": 8
+        },
+        {
+          "id": "m3r9",
+          "title": "Anthropic: Streaming messages",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/streaming",
+          "kind": "Docs",
+          "description": "Stream tokens for responsive chat UX",
+          "sort_order": 9
+        },
+        {
+          "id": "m3r10",
+          "title": "OpenAI: Streaming API responses",
+          "url": "https://platform.openai.com/docs/guides/streaming-responses",
+          "kind": "Docs",
+          "description": "SSE streaming from the API",
+          "sort_order": 10
+        },
+        {
+          "id": "m3r11",
+          "title": "FastAPI: StreamingResponse",
+          "url": "https://fastapi.tiangolo.com/advanced/custom-response/#streamingresponse",
+          "kind": "Docs",
+          "description": "Expose streams from Python to your frontend",
+          "sort_order": 11
+        },
+        {
+          "id": "m3r12",
+          "title": "Instructor (structured outputs)",
+          "url": "https://python.useinstructor.com/",
+          "kind": "Docs",
+          "description": "Pydantic-first parsing and validation of LLM output",
+          "sort_order": 12
+        },
+        {
+          "id": "m3r13",
+          "title": "Tenacity (retries and backoff)",
+          "url": "https://tenacity.readthedocs.io/",
+          "kind": "Docs",
+          "description": "Handle rate limits and transient API failures",
+          "sort_order": 13
+        }
+      ]
+    },
+    {
+      "id": "ai-engineer-m4",
+      "sort_order": 4,
+      "period_label": "February 2027",
+      "heading": "Embeddings and retrieval (RAG)",
+      "goal": "Answer from your documents: chunking, embeddings, vector search, hybrid search, reranking and citations.",
+      "project": "RAG Q&A over public documents with pgvector, FastAPI, a React UI with streaming and source citations.",
+      "tech": [
+        "pgvector",
+        "PostgreSQL",
+        "Embeddings",
+        "LlamaIndex",
+        "LangChain",
+        "Full-text search",
+        "SQLAlchemy",
+        "Reranking",
+        "RAG evals"
+      ],
+      "topics": [
+        {
+          "id": "m4r0",
+          "title": "pgvector (vector search inside Postgres)",
+          "url": "https://github.com/pgvector/pgvector",
+          "kind": "GitHub",
+          "description": "Fits the Postgres stack you know",
+          "sort_order": 0
+        },
+        {
+          "id": "m4r1",
+          "title": "Anthropic: Contextual Retrieval",
+          "url": "https://www.anthropic.com/news/contextual-retrieval",
+          "kind": "Blog",
+          "description": "Why plain chunking fails",
+          "sort_order": 1
+        },
+        {
+          "id": "m4r2",
+          "title": "LlamaIndex documentation",
+          "url": "https://docs.llamaindex.ai/",
+          "kind": "Docs",
+          "description": "RAG building blocks",
+          "sort_order": 2
+        },
+        {
+          "id": "m4r3",
+          "title": "LangChain introduction",
+          "url": "https://python.langchain.com/docs/introduction/",
+          "kind": "Docs",
+          "description": "Alternative framework",
+          "sort_order": 3
+        },
+        {
+          "id": "m4r4",
+          "title": "Eugene Yan: Patterns for Building LLM-based Systems",
+          "url": "https://eugeneyan.com/writing/llm-patterns/",
+          "kind": "Blog",
+          "description": "Retrieval, guardrails, evals",
+          "sort_order": 4
+        },
+        {
+          "id": "m4r5",
+          "title": "Chroma documentation",
+          "url": "https://docs.trychroma.com/",
+          "kind": "Docs",
+          "description": "Local vector store for experiments",
+          "sort_order": 5
+        },
+        {
+          "id": "m4r6",
+          "title": "PostgreSQL full text search",
+          "url": "https://www.postgresql.org/docs/current/textsearch.html",
+          "kind": "Docs",
+          "description": "Keyword + vector hybrid retrieval",
+          "sort_order": 6
+        },
+        {
+          "id": "m4r7",
+          "title": "SQLAlchemy 2.0 tutorial",
+          "url": "https://docs.sqlalchemy.org/en/20/tutorial/",
+          "kind": "Docs",
+          "description": "Database access from Python services",
+          "sort_order": 7
+        },
+        {
+          "id": "m4r8",
+          "title": "LlamaIndex: Advanced retrieval and reranking",
+          "url": "https://docs.llamaindex.ai/en/stable/optimizing/advanced_retrieval/advanced_retrieval/",
+          "kind": "Docs",
+          "description": "Two-stage retrieve then rerank for accuracy",
+          "sort_order": 8
+        },
+        {
+          "id": "m4r9",
+          "title": "RAGAS",
+          "url": "https://docs.ragas.io/",
+          "kind": "Docs",
+          "description": "Measure faithfulness, context recall and answer relevance",
+          "sort_order": 9
+        },
+        {
+          "id": "m4r10",
+          "title": "Unstructured (document parsing)",
+          "url": "https://docs.unstructured.io/",
+          "kind": "Docs",
+          "description": "PDFs and office files into clean chunks",
+          "sort_order": 10
+        },
+        {
+          "id": "m4r11",
+          "title": "Vercel AI SDK",
+          "url": "https://sdk.vercel.ai/docs",
+          "kind": "Docs",
+          "description": "Streaming chat UI patterns in React (fits your stack)",
+          "sort_order": 11
+        }
+      ]
+    },
+    {
+      "id": "ai-engineer-m5",
+      "sort_order": 5,
+      "period_label": "March 2027",
+      "heading": "Agents, tools and MCP",
+      "goal": "Models calling tools and multi-step workflows safely. Know when a workflow beats an agent.",
+      "project": "MCP server with read-only tools, agent with logging, eval cases and human approval for writes.",
+      "tech": [
+        "Tool use",
+        "MCP",
+        "LangGraph",
+        "Agent loops",
+        "Guardrails",
+        "LLM security"
+      ],
+      "topics": [
+        {
+          "id": "m5r0",
+          "title": "Anthropic: Building effective agents",
+          "url": "https://www.anthropic.com/engineering/building-effective-agents",
+          "kind": "Blog",
+          "description": "Simple, composable patterns",
+          "sort_order": 0
+        },
+        {
+          "id": "m5r1",
+          "title": "Model Context Protocol docs",
+          "url": "https://modelcontextprotocol.io/",
+          "kind": "Docs",
+          "description": "Build an MCP server",
+          "sort_order": 1
+        },
+        {
+          "id": "m5r2",
+          "title": "Hugging Face Agents Course",
+          "url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+          "kind": "Course",
+          "description": "Free, certificate option",
+          "sort_order": 2
+        },
+        {
+          "id": "m5r3",
+          "title": "LangGraph documentation",
+          "url": "https://langchain-ai.github.io/langgraph/",
+          "kind": "Docs",
+          "description": "Stateful agent graphs",
+          "sort_order": 3
+        },
+        {
+          "id": "m5r4",
+          "title": "Lilian Weng: LLM Powered Autonomous Agents",
+          "url": "https://lilianweng.github.io/",
+          "kind": "Blog",
+          "description": "Planning, memory and tools",
+          "sort_order": 4
+        },
+        {
+          "id": "m5r5",
+          "title": "OWASP Top 10 for LLM Applications",
+          "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+          "kind": "Guide",
+          "description": "Prompt injection, excessive agency and data leakage",
+          "sort_order": 5
+        },
+        {
+          "id": "m5r6",
+          "title": "Anthropic: Implement tool use",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+          "kind": "Docs",
+          "description": "Tool schemas, errors and safe defaults",
+          "sort_order": 6
+        },
+        {
+          "id": "m5r7",
+          "title": "NVIDIA: Evaluating agentic workflows",
+          "url": "https://developer.nvidia.com/blog/evaluating-agentic-ai-systems/",
+          "kind": "Blog",
+          "description": "When agents fail and how to measure reliability",
+          "sort_order": 7
+        }
+      ]
+    },
+    {
+      "id": "ai-engineer-m6",
+      "sort_order": 6,
+      "period_label": "April 2027",
+      "heading": "Evaluation, fine-tuning, serving and portfolio",
+      "goal": "Evals, tracing, light fine-tuning, deployment, then package work for applications.",
+      "project": "Add evals and observability to your RAG project, containerise with Docker, schedule with Airflow, publish results.",
+      "tech": [
+        "Evals",
+        "MLflow",
+        "Docker",
+        "vLLM",
+        "PEFT / LoRA",
+        "Observability",
+        "Local LLMs"
+      ],
+      "topics": [
+        {
+          "id": "m6r0",
+          "title": "Hamel Husain: Your AI product needs evals",
+          "url": "https://hamel.dev/blog/posts/evals/",
+          "kind": "Blog",
+          "description": "Practical LLM evaluation",
+          "sort_order": 0
+        },
+        {
+          "id": "m6r1",
+          "title": "Made With ML",
+          "url": "https://madewithml.com/",
+          "kind": "Course",
+          "description": "MLOps: testing, tracking, CI/CD",
+          "sort_order": 1
+        },
+        {
+          "id": "m6r2",
+          "title": "Full Stack Deep Learning",
+          "url": "https://fullstackdeeplearning.com/",
+          "kind": "Course",
+          "description": "Production ML and LLM material",
+          "sort_order": 2
+        },
+        {
+          "id": "m6r3",
+          "title": "MLflow documentation",
+          "url": "https://mlflow.org/docs/latest/",
+          "kind": "Docs",
+          "description": "Experiment tracking and registry",
+          "sort_order": 3
+        },
+        {
+          "id": "m6r4",
+          "title": "Hugging Face PEFT",
+          "url": "https://huggingface.co/docs/peft",
+          "kind": "Docs",
+          "description": "LoRA fine-tuning on one GPU",
+          "sort_order": 4
+        },
+        {
+          "id": "m6r5",
+          "title": "vLLM documentation",
+          "url": "https://docs.vllm.ai/",
+          "kind": "Docs",
+          "description": "Serve open models efficiently",
+          "sort_order": 5
+        },
+        {
+          "id": "m6r6",
+          "title": "Chip Huyen: Building a Generative AI Platform",
+          "url": "https://huyenchip.com/2024/07/25/genai-platform.html",
+          "kind": "Blog",
+          "description": "Production architecture",
+          "sort_order": 6
+        },
+        {
+          "id": "m6r7",
+          "title": "pytest getting started",
+          "url": "https://docs.pytest.org/en/stable/getting-started.html",
+          "kind": "Docs",
+          "description": "Tests for evals and pipelines",
+          "sort_order": 7
+        },
+        {
+          "id": "m6r8",
+          "title": "Langfuse (LLM observability)",
+          "url": "https://langfuse.com/docs",
+          "kind": "Docs",
+          "description": "Traces, latency, cost and prompt versions in prod",
+          "sort_order": 8
+        },
+        {
+          "id": "m6r9",
+          "title": "DeepEval",
+          "url": "https://docs.confident-ai.com/",
+          "kind": "Docs",
+          "description": "Automated LLM tests and regression suites",
+          "sort_order": 9
+        },
+        {
+          "id": "m6r10",
+          "title": "Ollama",
+          "url": "https://github.com/ollama/ollama",
+          "kind": "Tool",
+          "description": "Run open models locally for dev and demos",
+          "sort_order": 10
+        },
+        {
+          "id": "m6r11",
+          "title": "OpenAI: Working with evals",
+          "url": "https://platform.openai.com/docs/guides/evals",
+          "kind": "Docs",
+          "description": "Curate datasets and score model outputs",
+          "sort_order": 11
+        },
+        {
+          "id": "m6r12",
+          "title": "Hugging Face: Quantization overview",
+          "url": "https://huggingface.co/docs/transformers/main/en/quantization",
+          "kind": "Docs",
+          "description": "Smaller/faster models for CPU and edge serving",
+          "sort_order": 12
+        },
+        {
+          "id": "m6r13",
+          "title": "OpenTelemetry Python",
+          "url": "https://opentelemetry.io/docs/languages/python/",
+          "kind": "Docs",
+          "description": "Standard tracing you can attach to AI services",
+          "sort_order": 13
+        }
+      ]
+    }
+  ]
+}

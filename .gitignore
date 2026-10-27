@@ -3,6 +3,11 @@
 .env.*
 *.log
 node_modules/
+frontend/dist/
+frontend/node_modules/
+backend/.venv/
+backend/app/static/*
+!backend/app/static/.gitkeep
 __pycache__/
 .venv/
 venv/

@@ -1,0 +1,27 @@
+{
+  "slug": "devops-starter",
+  "title": "DevOps learning path",
+  "subtitle": "Template plan — add your own modules and topics",
+  "lead": "Example empty-ish plan. Duplicate this seed file or add topics in the app to build a DevOps (or any) track.",
+  "modules": [
+    {
+      "id": "devops-starter-m1",
+      "sort_order": 1,
+      "period_label": "Phase 1",
+      "heading": "Containers and CI",
+      "goal": "Docker fundamentals and pipeline basics.",
+      "project": "Containerise a small app and run tests in GitHub Actions.",
+      "tech": ["Docker", "GitHub Actions"],
+      "topics": [
+        {
+          "id": "devops-m1r0",
+          "title": "Docker docs: Get started",
+          "url": "https://docs.docker.com/get-started/",
+          "kind": "Docs",
+          "description": "Images, containers, compose",
+          "sort_order": 0
+        }
+      ]
+    }
+  ]
+}
