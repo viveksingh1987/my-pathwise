@@ -8,7 +8,7 @@ alwaysApply: true
 This project uses **viveksingh1987**: https://github.com/viveksingh1987/ai-learning-tracker.git
 
 - SSH remote: `git@github.com-personal:viveksingh1987/ai-learning-tracker.git`
-- Before push or PR work, run `./scripts/git-account.sh apply` or `./scripts/git-push.sh`.
-- Use this repo’s local git config; do not rely on global git user/email alone.
+- Local git email for commits: `viveksingh87@outlook.in`
+- Git push helpers are on the developer machine at `~/git-scripts/` (not in this repo).
 
 See `AGENTS.md` for details.

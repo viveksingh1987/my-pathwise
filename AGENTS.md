@@ -12,12 +12,4 @@
 
 Use the SSH remote and local git user above for push, PR, and remote changes in this project.
 
-### Scripts
-
-```bash
-./scripts/git-account.sh apply   # configure this clone (default)
-./scripts/git-account.sh status
-./scripts/git-push.sh            # apply account settings, then git push
-```
-
-First-time SSH setup: add `scripts/ssh-config/github-personal.snippet` to `~/.ssh/config`, then run `./scripts/git-account.sh apply`.
+Local git helpers live on this machine under `~/git-scripts/` (not in this public repo). Before pushing from a clone, run `~/git-scripts/git-account.sh apply` from the repo root, or `~/git-scripts/git-push.sh`.

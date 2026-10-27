@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI engineer roadmap: 6 months</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f2f5f3;--surface:#fff;--ink:#14232b;--muted:#4d6068;--line:#c9d5d0;--accent:#0f766e;--accent-soft:#d5ece8;--proj:#9a4a07;--proj-soft:#faebd9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a1f;--surface:#17252c;--ink:#e6efec;--muted:#a3b5b0;--line:#2f4450;--accent:#5fd0c3;--accent-soft:#183a3b;--proj:#f0b27a;--proj-soft:#3a2a1a}}
+:root[data-theme="dark"]{--bg:#0f1a1f;--surface:#17252c;--ink:#e6efec;--muted:#a3b5b0;--line:#2f4450;--accent:#5fd0c3;--accent-soft:#183a3b;--proj:#f0b27a;--proj-soft:#3a2a1a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 64px}
+h1,h2,h3{font-family:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,6vw,3rem);letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:62ch;margin:14px 0 20px}
+.prog{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0 0 28px}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;padding:0;list-style:none}
+.stack li{font-size:.82rem;background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:99px}
+.month{position:relative;padding-left:34px;margin-bottom:36px}
+.month::before{content:"";position:absolute;left:9px;top:28px;bottom:-36px;width:2px;background:var(--line)}
+.month:last-child::before{display:none}
+.dot{position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--bg);font:700 .75rem/20px system-ui;text-align:center}
+.when{color:var(--muted);font-size:.9rem;margin:2px 0 0}
+h2{font-size:1.55rem}
+.goal{margin:8px 0 0}
+ul.res{list-style:none;margin:14px 0 0;padding:0;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.res li{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-top:1px solid var(--line)}
+.res li:first-child{border-top:0}
+.res li>input{margin-top:6px;accent-color:var(--accent);width:16px;height:16px;flex:none}
+.res a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+.res a:hover,.res a:focus-visible{color:var(--accent)}
+.res a:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.res input:checked+div a{color:var(--muted);text-decoration-color:var(--line)}
+.kind{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 6px;margin-left:6px;white-space:nowrap}
+.note{display:block;color:var(--muted);font-size:.88rem}
+.proj{margin:14px 0 0;background:var(--proj-soft);border-left:4px solid var(--proj);border-radius:6px;padding:10px 14px}
+.proj b{color:var(--proj)}
+.tips{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.tips h2{font-size:1.3rem;margin-bottom:6px}
+.tips ul{margin:8px 0 0;padding-left:20px}
+button{font:inherit;background:none;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer;margin-top:10px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 20px}
+.tools button,.row2 button{margin-top:0}
+select,input[type=date],input[type=text],input[type=url],textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+textarea{width:100%;min-height:84px;resize:vertical;margin-top:6px}
+.row2{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px}
+.res li>div{flex:1;min-width:0}
+.od{color:var(--proj);font-size:.85rem;font-weight:600}
+details{margin-top:6px}summary{cursor:pointer;color:var(--muted);font-size:.9rem}summary.has{color:var(--accent)}
+.sched,.add{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0 0 20px}
+.sched ol{margin:6px 0 0;padding-left:20px}
+#io{display:none}
+</style>
+</head>
+<body>
+<main class="wrap">
+<h1>From full-stack developer to AI engineer</h1>
+<p class="lead">A six-month plan for November 2026 to April 2027, assuming 8 to 10 hours a week. You already ship Python, Django, React, Postgres and Airflow, so this plan skips web basics and adds only the Python and SQL that AI work leans on: data libraries, typing, async, testing, window functions and text search. The rest goes to ML foundations, LLM applications, retrieval, agents and evaluation. All resources are free. Set a date and keep notes on every topic; changes save automatically.</p>
+<div class="prog" aria-live="polite"><span id="ptext"></span><div class="bar"><i id="pbar"></i></div></div>
+<div class="sched"><b>Next on your schedule</b><ol id="up"></ol></div>
+<div class="tools"><label>Show <select id="flt" aria-label="Filter topics"><option value="all">all topics</option><option value="open">open</option><option value="done">done</option><option value="scheduled">scheduled</option><option value="unscheduled">unscheduled</option><option value="overdue">overdue</option></select></label>
+<button id="auto" type="button">Auto-schedule unscheduled topics</button><button id="exp" type="button">Export</button><button id="imp" type="button">Import</button><span id="saved" class="note"></span></div>
+<div id="io" class="sched"><textarea id="iot" aria-label="Plan data as text"></textarea><div class="row2"><button id="cp" type="button">Copy</button><button id="ap" type="button">Apply import</button><button id="cl" type="button">Close</button></div></div>
+<ul class="stack" aria-label="Technologies in this plan" id="stack"></ul>
+<div id="months" style="margin-top:32px"></div>
+<section class="add"><h2>Add your own topic</h2>
+<div class="row2"><input type="text" id="nt" placeholder="Topic title" aria-label="Topic title" size="26"><input type="url" id="nu" placeholder="Link (optional)" aria-label="Link" size="26"><select id="nm" aria-label="Month"></select><button id="na" type="button">Add topic</button></div></section>
+<section class="tips">
+<h2>Alongside the modules</h2>
+<ul>
+<li>Keep every project in a public GitHub repo with a README that shows a demo and your evaluation results.</li>
+<li>Write one short blog post per project. Hiring managers read these more than certificates.</li>
+<li>Look for an AI feature at work (search, summarising, anomaly detection) to apply what you learn to real data.</li>
+<li>Use public data only for side projects. Do not put employer or customer data into personal repos.</li>
+</ul>
+<button id="reset" type="button">Reset progress</button>
+</section>
+</main>
+<script>
+var M=[
+{n:1,t:"November 2026",h:"Python, SQL and machine learning foundations",g:"Learn how models are trained and judged: features, loss, overfitting, metrics. Sharpen the Python data stack and the analytical SQL you will use daily. The Python and SQL items are light, so spread them across the month.",
+tech:["NumPy","pandas","scikit-learn","Jupyter","Kaggle","Python typing","Window functions","CTEs"],
+r:[
+["Google Machine Learning Crash Course","https://developers.google.com/machine-learning/crash-course","Course","Short, practical start"],
+["Kaggle Learn: Pandas and Intro to Machine Learning","https://www.kaggle.com/learn","Course","Free notebooks with exercises"],
+["StatQuest with Josh Starmer","https://www.youtube.com/@statquest","YouTube","Clear explanations of regression, trees, and metrics"],
+["3Blue1Brown: Neural networks","https://www.3blue1brown.com/topics/neural-networks","YouTube","Build intuition for gradients and backpropagation"],
+["Machine Learning Specialization (Andrew Ng, audit for free)","https://www.coursera.org/specializations/machine-learning-introduction","Course","Pick the courses you need; auditing is free"],
+["scikit-learn tutorials","https://scikit-learn.org/stable/tutorial/index.html","Docs","Reference while you build"],
+["Python Data Science Handbook (Jake VanderPlas)","https://jakevdp.github.io/PythonDataScienceHandbook/","Book","Free online: NumPy, pandas, matplotlib, scikit-learn"],
+["NumPy: absolute beginners guide","https://numpy.org/doc/stable/user/absolute_beginners.html","Docs","Arrays, shapes and broadcasting, which ML code relies on"],
+["Python type hints cheat sheet (mypy)","https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html","Docs","Typed Python is standard in AI codebases"],
+["Kaggle Learn: Advanced SQL","https://www.kaggle.com/learn/advanced-sql","Course","Joins, analytic functions, nested data and query performance"],
+["PostgreSQL tutorial: window functions","https://www.postgresql.org/docs/current/tutorial-window.html","Docs","Rolling averages, ranking and lag; needed for feature building"],
+["SQLBolt","https://sqlbolt.com/","Website","Quick interactive refresher if any SQL basics feel rusty"]],
+p:"Forecast electricity demand from a public half-hourly dataset. Compare a simple baseline with gradient boosting and report the error."},
+{n:2,t:"December 2026",h:"Deep learning and transformers",g:"Understand neural networks and the transformer architecture well enough to read papers and debug model behaviour.",
+tech:["PyTorch","Transformers","GPU basics","Google Colab"],
+r:[
+["Andrej Karpathy: Neural Networks, Zero to Hero","https://karpathy.ai/zero-to-hero.html","YouTube","The best single series; do the coding along"],
+["PyTorch basics tutorials","https://pytorch.org/tutorials/beginner/basics/intro.html","Docs","Tensors, autograd, training loops"],
+["The Illustrated Transformer (Jay Alammar)","https://jalammar.github.io/illustrated-transformer/","Blog","Visual walkthrough of attention"],
+["fast.ai Practical Deep Learning","https://course.fast.ai/","Course","Top-down, project-first approach"],
+["Build a Large Language Model from Scratch (Sebastian Raschka)","https://github.com/rasbt/LLMs-from-scratch","GitHub","Optional deeper dive"]],
+p:"Train a small character-level language model with PyTorch (the makemore series), then explain in a blog post how attention works."},
+{n:3,t:"January 2027",h:"Building with LLM APIs",g:"Move from using chat tools to building products on LLM APIs: prompting, structured output, tool calling, streaming, cost and latency.",
+tech:["Claude API","OpenAI API","Prompt design","JSON schema","FastAPI","Pydantic","asyncio"],
+r:[
+["Andrej Karpathy: Intro to Large Language Models","https://www.youtube.com/watch?v=zjkBMFhNj_g","YouTube","One-hour mental model of LLMs"],
+["Anthropic prompt engineering guide","https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview","Docs","Prompting patterns that work"],
+["Anthropic courses (GitHub)","https://github.com/anthropics/courses","GitHub","Hands-on notebooks for API use and tool use"],
+["DeepLearning.AI short courses","https://www.deeplearning.ai/short-courses/","Course","Pick the free ones on LLM APIs and function calling"],
+["OpenAI Cookbook","https://cookbook.openai.com/","Docs","Many worked examples"],
+["Hugging Face LLM Course","https://huggingface.co/learn/llm-course/chapter1/1","Course","Open models, tokenizers, pipelines"],
+["FastAPI tutorial","https://fastapi.tiangolo.com/tutorial/","Docs","Serve your LLM features as APIs"],
+["Pydantic documentation","https://docs.pydantic.dev/latest/","Docs","Validate and parse model output into typed objects"],
+["Real Python: async IO in Python","https://realpython.com/async-io-python/","Blog","Run many LLM calls concurrently without blocking"]],
+p:"Build a small API that extracts structured fields from messy text (for example, support emails into JSON), with validation and retries."},
+{n:4,t:"February 2027",h:"Embeddings and retrieval (RAG)",g:"Make models answer from your own documents: chunking, embeddings, vector search, hybrid search, reranking and citations.",
+tech:["pgvector","PostgreSQL","Embeddings","LlamaIndex","LangChain","Full-text search","SQLAlchemy"],
+r:[
+["pgvector (vector search inside Postgres)","https://github.com/pgvector/pgvector","GitHub","Fits the Postgres stack you already know"],
+["Anthropic: Contextual Retrieval","https://www.anthropic.com/news/contextual-retrieval","Blog","Why plain chunking fails and how to improve it"],
+["LlamaIndex documentation","https://docs.llamaindex.ai/","Docs","RAG building blocks and examples"],
+["LangChain introduction","https://python.langchain.com/docs/introduction/","Docs","Alternative framework; compare both"],
+["Eugene Yan: Patterns for Building LLM-based Systems","https://eugeneyan.com/writing/llm-patterns/","Blog","Retrieval, guardrails, evals in one read"],
+["Chroma documentation","https://docs.trychroma.com/","Docs","Simple local vector store for experiments"],
+["PostgreSQL full text search","https://www.postgresql.org/docs/current/textsearch.html","Docs","Keyword search to combine with vectors for hybrid retrieval"],
+["SQLAlchemy 2.0 tutorial","https://docs.sqlalchemy.org/en/20/tutorial/","Docs","Clean database access from Python services outside Django"]],
+p:"RAG question-answering over public documents such as Electricity Authority guidance, using pgvector, a FastAPI backend and a small React front end that shows source citations."},
+{n:5,t:"March 2027",h:"Agents, tools and MCP",g:"Let models call tools and run multi-step workflows safely. Know when a plain workflow beats an agent.",
+tech:["Tool use","MCP","LangGraph","Agent loops","Guardrails"],
+r:[
+["Anthropic: Building effective agents","https://www.anthropic.com/engineering/building-effective-agents","Blog","Start here; favours simple, composable patterns"],
+["Model Context Protocol docs","https://modelcontextprotocol.io/","Docs","Build your own MCP server"],
+["Hugging Face Agents Course","https://huggingface.co/learn/agents-course/unit0/introduction","Course","Free, with certificate option"],
+["LangGraph documentation","https://langchain-ai.github.io/langgraph/","Docs","Stateful, controllable agent graphs"],
+["Lilian Weng: LLM Powered Autonomous Agents","https://lilianweng.github.io/","Blog","Background on planning, memory and tools"]],
+p:"Build an MCP server that exposes a few read-only tools, and an agent that uses them to answer questions. Add logging of every tool call and a human approval step for any write action."},
+{n:6,t:"April 2027",h:"Evaluation, fine-tuning, serving and portfolio",g:"Make AI features reliable and shippable: evals, tracing, light fine-tuning, deployment, then package your work for job applications.",
+tech:["Evals","MLflow","Docker","vLLM","PEFT / LoRA"],
+r:[
+["Hamel Husain: Your AI product needs evals","https://hamel.dev/blog/posts/evals/","Blog","The most practical guide to LLM evaluation"],
+["Made With ML","https://madewithml.com/","Course","MLOps: testing, tracking, CI/CD for ML"],
+["Full Stack Deep Learning","https://fullstackdeeplearning.com/","Course","Production ML and LLM bootcamp material"],
+["MLflow documentation","https://mlflow.org/docs/latest/","Docs","Experiment tracking and model registry"],
+["Hugging Face PEFT","https://huggingface.co/docs/peft","Docs","LoRA fine-tuning on a single GPU"],
+["vLLM documentation","https://docs.vllm.ai/","Docs","Serve open models efficiently"],
+["Chip Huyen: Building a Generative AI Platform","https://huyenchip.com/2024/07/25/genai-platform.html","Blog","Architecture overview for production"],
+["pytest getting started","https://docs.pytest.org/en/stable/getting-started.html","Docs","Automated tests for your evals and pipelines"]],
+p:"Add an evaluation set and automated scoring to your RAG project from February, containerise it with Docker, and run it on a schedule with Airflow. Publish a write-up with your results, then start applying for AI engineer roles or propose an AI project at work."}
+];
+var K="ai-roadmap-v2",OLD="ai-roadmap-v1",S={items:{},custom:[]},API=false,flt="all",tm=null;
+var root=document.getElementById("months"),stack=document.getElementById("stack"),seen={};
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt)e.textContent=txt;return e}
+function pad(n){return String(n).padStart(2,"0")}
+function iso(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+function norm(s){if(!s||typeof s!=="object"||Array.isArray(s))return{items:{},custom:[]};
+  if(!s.items){var o={};Object.keys(s).forEach(function(k){o[k]={done:1}});return{items:o,custom:[]}}
+  s.custom=s.custom||[];return s}
+function load(cb){fetch("api/state").then(function(r){return r.json()}).then(function(s){API=true;S=norm(s);cb()})
+  .catch(function(){API=false;try{S=norm(JSON.parse(localStorage.getItem(K)||localStorage.getItem(OLD)||"null"))}catch(e){S=norm(null)}cb()})}
+function save(){clearTimeout(tm);tm=setTimeout(function(){
+  if(API){fetch("api/state",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(S)}).catch(function(){})}
+  else{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+  document.getElementById("saved").textContent=API?"Saved to server":"Saved in this browser"},400)}
+function w(id){return S.items[id]||(S.items[id]={})}
+function all(){var L=[];M.forEach(function(m){m.r.forEach(function(r,i){L.push({id:"m"+m.n+"r"+i,m:m.n,t:r[0],u:r[1],k:r[2],note:r[3],c:0})})});
+  S.custom.forEach(function(c){L.push({id:c.id,m:c.m,t:c.t,u:c.u,k:"Custom",note:"",c:1})});return L}
+function show(x){var s=S.items[x.id]||{},T=iso(new Date());
+  if(flt==="open")return !s.done;if(flt==="done")return !!s.done;if(flt==="scheduled")return !!s.date;
+  if(flt==="unscheduled")return !s.date;if(flt==="overdue")return !s.done&&!!s.date&&s.date<T;return true}
+function fmt(d){return new Date(d+"T00:00").toLocaleDateString(undefined,{day:"numeric",month:"short",year:"numeric"})}
+function row(x){
+  var s=S.items[x.id]||{},li=el("li"),cb=document.createElement("input");cb.type="checkbox";cb.checked=!!s.done;
+  cb.setAttribute("aria-label","Mark done: "+x.t);
+  cb.onchange=function(){w(x.id).done=cb.checked?1:0;save();summary();badge()};
+  var box=el("div"),a;if(x.u){a=el("a","",x.t);a.href=x.u;a.target="_blank";a.rel="noopener noreferrer"}else a=el("span","",x.t);
+  box.appendChild(a);box.appendChild(el("span","kind",x.k));if(x.note)box.appendChild(el("span","note",x.note));
+  var r2=el("div","row2"),di=document.createElement("input");di.type="date";di.value=s.date||"";
+  di.setAttribute("aria-label","Planned date for "+x.t);var od=el("span","od");
+  function badge(){var q=S.items[x.id]||{};od.textContent=(!q.done&&q.date&&q.date<iso(new Date()))?"Overdue":""}
+  di.onchange=function(){w(x.id).date=di.value;save();summary();badge()};
+  r2.appendChild(el("span","note","Planned for"));r2.appendChild(di);r2.appendChild(od);
+  if(x.c){var rm=el("button","","Remove");rm.type="button";rm.onclick=function(){
+    if(rm.dataset.s){S.custom=S.custom.filter(function(c){return c.id!==x.id});delete S.items[x.id];save();render()}
+    else{rm.dataset.s=1;rm.textContent="Click again to remove"}};r2.appendChild(rm)}
+  box.appendChild(r2);
+  var dt=document.createElement("details"),sm=el("summary","","Notes and connections"),ta=document.createElement("textarea");
+  ta.value=s.note||"";ta.placeholder="Notes, people to connect with, links, how this applies at work";
+  ta.setAttribute("aria-label","Notes for "+x.t);if(s.note){sm.className="has";dt.open=false}
+  ta.oninput=function(){w(x.id).note=ta.value;sm.className=ta.value?"has":"";save()};
+  dt.appendChild(sm);dt.appendChild(ta);box.appendChild(dt);badge();
+  li.appendChild(cb);li.appendChild(box);return li}
+function buildMonths(){root.textContent="";
+  M.forEach(function(m){
+    var s=el("section","month"),d=el("span","dot",String(m.n));d.setAttribute("aria-hidden","true");s.appendChild(d);
+    s.appendChild(el("h2","",m.h));s.appendChild(el("p","when",m.t));s.appendChild(el("p","goal",m.g));
+    var ul=el("ul","res"),L=all().filter(function(x){return x.m===m.n&&show(x)});
+    L.forEach(function(x){ul.appendChild(row(x))});
+    if(!L.length){ul.appendChild(el("li","","No topics match this filter."))}
+    s.appendChild(ul);var p=el("div","proj");p.appendChild(el("b","","Project: "));p.appendChild(document.createTextNode(m.p));
+    s.appendChild(p);root.appendChild(s)})}
+function summary(){var T=iso(new Date()),L=all(),n=0,sch=0,od=0,up=[];
+  L.forEach(function(x){var s=S.items[x.id]||{};if(s.done)n++;if(s.date)sch++;
+    if(s.date&&!s.done){if(s.date<T)od++;up.push([s.date,x])}});
+  up.sort(function(a,b){return a[0]<b[0]?-1:1});
+  document.getElementById("ptext").textContent=n+" of "+L.length+" topics done, "+sch+" scheduled"+(od?", "+od+" overdue":"");
+  document.getElementById("pbar").style.width=(L.length?n/L.length*100:0)+"%";
+  var u=document.getElementById("up");u.textContent="";
+  if(!up.length)u.appendChild(el("li","","Nothing scheduled yet. Pick a date on a topic or use Auto-schedule."));
+  up.slice(0,5).forEach(function(q){u.appendChild(el("li","",fmt(q[0])+": "+q[1].t+(q[0]<T?" (overdue)":"")))})}
+function render(){buildMonths();summary()}
+function auto(){var L=all();M.forEach(function(m){var mo=10+m.n-1,days=new Date(2026,mo+1,0).getDate(),
+  o=L.filter(function(x){return x.m===m.n&&!(S.items[x.id]||{}).date});
+  o.forEach(function(x,i){w(x.id).date=iso(new Date(2026,mo,1+Math.floor((i+.5)*days/o.length)))})});save();render()}
+M.forEach(function(m){m.tech.forEach(function(t){if(!seen[t]){seen[t]=1;stack.appendChild(el("li","",t))}});
+  var o=el("option","",m.t+": "+m.h);o.value=m.n;document.getElementById("nm").appendChild(o)});
+document.getElementById("flt").onchange=function(){flt=this.value;render()};
+document.getElementById("auto").onclick=auto;
+var io=document.getElementById("io"),iot=document.getElementById("iot");
+document.getElementById("exp").onclick=function(){iot.value=JSON.stringify(S,null,2);io.style.display="block";iot.select()};
+document.getElementById("imp").onclick=function(){iot.value="";io.style.display="block";iot.focus()};
+document.getElementById("cl").onclick=function(){io.style.display="none"};
+document.getElementById("cp").onclick=function(){iot.select();try{navigator.clipboard.writeText(iot.value)}catch(e){}};
+document.getElementById("ap").onclick=function(){try{S=norm(JSON.parse(iot.value));save();render();io.style.display="none"}
+  catch(e){iot.value="That text is not valid plan data. Paste an export and try again."}};
+document.getElementById("na").onclick=function(){var t=document.getElementById("nt"),u=document.getElementById("nu");
+  if(!t.value.trim()){t.focus();return}
+  S.custom.push({id:"c"+Date.now(),m:+document.getElementById("nm").value,t:t.value.trim(),u:u.value.trim()});
+  t.value="";u.value="";save();render()};
+var rs=document.getElementById("reset");rs.onclick=function(){
+  if(rs.dataset.s){S=norm(null);save();render();rs.dataset.s="";rs.textContent="Reset progress"}
+  else{rs.dataset.s=1;rs.textContent="Click again to erase all progress, dates and notes"}};
+load(render);
+</script>
+</body>
+</html>
